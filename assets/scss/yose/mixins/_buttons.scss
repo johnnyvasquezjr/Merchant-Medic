@@ -1,0 +1,40 @@
+//
+// Buttons
+//
+
+// Soft Buttons
+
+@mixin button-soft($color, $hover-color, $background, $hover-background) {
+  color: $color;
+  background: rgba($background, $btn-soft-bg-opacity);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $hover-color;
+    background: rgba($hover-background, $btn-soft-hover-bg-opacity);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $background;
+    background-color: rgba($background, .1);
+  }
+}
+
+// Text Buttons
+
+@mixin button-text($color, $hover-color) {
+  color: $color;
+  background: transparent;
+
+  &[href],
+  &[type] {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $hover-color;
+    }
+  }
+}
