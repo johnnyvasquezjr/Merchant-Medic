@@ -158,6 +158,7 @@ a {
   color: #0c56de;
   text-decoration: none;
   background-color: transparent;
+  margin: 10px;
 }
 a:hover {
   color: #0943ae;
